@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/secondbg">
+
+
+    <ImageView
+        android:id="@+id/second_zhongwen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="48dp"
+        android:src="@mipmap/first_zhongwen" />
+
+    <ImageView
+        android:id="@+id/second_nichang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/second_zhongwen"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="384dp"
+        android:src="@mipmap/second_nichang" />
+
+    <ImageView
+        android:id="@+id/second_duding_zhongwen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/second_nichang"
+        android:layout_marginLeft="96dp"
+        android:src="@mipmap/second_duding_zhongwen" />
+
+    <ImageView
+        android:id="@+id/second_duding_yingwen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/second_duding_zhongwen"
+        android:layout_marginLeft="96dp"
+        android:src="@mipmap/second_duding_yingwen" />
+
+
+    <RelativeLayout
+        android:id="@+id/shangchang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="508dp"
+        android:layout_marginTop="208dp">
+
+        <ImageView
+            android:id="@+id/second_shangchang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/second_shangchang" />
+
+        <ImageView
+            android:id="@+id/second_shangchang_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/second_shangchang"
+            android:layout_marginLeft="60dp"
+            android:src="@mipmap/second_shangchang_arrow" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/zhuzhai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="568dp"
+        android:layout_marginTop="115dp">
+
+        <ImageView
+            android:id="@+id/second_zhuzhai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/second_zhuzhai" />
+
+        <ImageView
+            android:id="@+id/second_zhuzhai_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/second_zhuzhai"
+            android:layout_marginLeft="60dp"
+            android:src="@mipmap/second_zhuzhai_arrow" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/xiezijian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="710dp"
+        android:layout_marginTop="95dp">
+
+        <ImageView
+            android:id="@+id/second_xiezijian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/second_xiezijian" />
+
+        <ImageView
+            android:id="@+id/second_xiezijian_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/second_xiezijian"
+            android:layout_marginRight="60dp"
+            android:src="@mipmap/second_xiezijian_arrow" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/peitao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="790dp"
+        android:layout_marginTop="185dp">
+
+        <ImageView
+            android:id="@+id/second_peitao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:src="@mipmap/second_peitao" />
+
+        <ImageView
+            android:id="@+id/second_peitao_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/second_peitao"
+            android:src="@mipmap/second_peitao_arrow" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/second_bottomline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:src="@mipmap/bottom_line" />
+
+
+    <ImageView
+        android:id="@+id/second_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/second_bottomline"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:src="@mipmap/second_arrow" />
+
+
+    <ImageView
+        android:id="@+id/second_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/first_logo"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="48dp"
+        android:layout_marginRight="33dp"/>
+
+
+</RelativeLayout>
