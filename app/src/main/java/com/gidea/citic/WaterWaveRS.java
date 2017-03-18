@@ -30,7 +30,6 @@ import static android.renderscript.ProgramStore.DepthFunc.ALWAYS;
 import static android.renderscript.Sampler.Value.CLAMP;
 import static android.renderscript.Sampler.Value.LINEAR;
 
-
 /**
  * ━━━━━━神兽出没━━━━━━
  * 　　　┏┓　　　┏┓
@@ -95,7 +94,6 @@ class WaterWaveRS/* extends RenderScriptScene */ {
     @SuppressWarnings({"FieldCanBeLocal"})
     private Mesh mMesh;
     private WorldState mWorldState;
-
     private ScriptC_WaterWave mScript;
 
     private ScriptField_Constants mConstants;
