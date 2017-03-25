@@ -1,9 +1,10 @@
 package com.gidea.citic;
 
-import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.renderscript.RSSurfaceView;
 import android.renderscript.RenderScriptGL;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
@@ -41,27 +42,40 @@ class WaterWaveView extends RSSurfaceView {
     private int mWidth;
     private int mHeight;
 
-    @TargetApi(11)
+//    @TargetApi(11)
     public WaterWaveView(Context context) {
         super(context);
         setFocusable(true);
         setFocusableInTouchMode(true);
+    }
+
+    public WaterWaveView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        setFocusable(true);
+        setFocusableInTouchMode(true);
+        init(context, attrs);
+    }
+
+    private void init(Context context, AttributeSet attrs) {
+        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.AppCompatImageView);
+
 
     }
 
-    @TargetApi(11)
+
+    //    @TargetApi(11)
     private void ensureRenderScript(int width ,int height){
         Log.d(TAG,"__Width = "+width+",Height = "+height);
         if(mRender == null){
             mRender = new WaterWaveRS(width, height);
             mRender.init(mRS, getResources());
         }else{
-//    		mRender.resize(width, height);
+    		mRender.resize(width, height);
         }
         mRender.start();
     }
 
-    @TargetApi(11)
+//    @TargetApi(11)
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
         // TODO Auto-generated method stub
@@ -72,15 +86,16 @@ class WaterWaveView extends RSSurfaceView {
         setRenderScriptGL(mRS);
     }
 
-    @TargetApi(11)
+//    @TargetApi(11)
     public void surfaceChanged(SurfaceHolder holder, int format, int w, int h) {
         super.surfaceChanged(holder, format, w, h);
         ensureRenderScript(w, h);
     }
 
-    @TargetApi(11)
+//    @TargetApi(11)
     @Override
     protected void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
         // Handle the system event and clean up
         mRender = null;
         if (mRS != null) {

@@ -30,6 +30,8 @@ import static android.renderscript.ProgramStore.DepthFunc.ALWAYS;
 import static android.renderscript.Sampler.Value.CLAMP;
 import static android.renderscript.Sampler.Value.LINEAR;
 
+
+
 /**
  * ━━━━━━神兽出没━━━━━━
  * 　　　┏┓　　　┏┓
@@ -124,7 +126,7 @@ class WaterWaveRS/* extends RenderScriptScene */ {
         final int width = worldState.width;
         final int x = width / 4 + (int) (Math.random() * (width / 2));
         final int y = worldState.height / 4 + (int) (Math.random() * (worldState.height / 2));
-        addDrop(x + (mWorldState.rotate == 0 ? (width * worldState.xOffset) : 0), y);
+//        addDrop(x + (mWorldState.rotate == 0 ? (width * worldState.xOffset) : 0), y);
     }
 
     public void resize(int width, int height) {
@@ -254,7 +256,7 @@ class WaterWaveRS/* extends RenderScriptScene */ {
 
     private void loadTextures() {
         //Commented by shihaijun to disable leaves
-        mScript.set_g_TLeaves(loadTextureARGB(R.drawable.pond));
+//        mScript.set_g_TLeaves(loadTextureARGB(R.drawable.pond));
         //Commented by shihaijun
 //        mScript.set_g_TRiverbed(loadRotatedTexture(R.drawable.snowenv/*keyguard_default_wallpaper*/));
         mScript.set_g_TRiverbed(/*loadLockScreenTexture(R.drawable.keyguard_default_wallpaper)*/
@@ -269,7 +271,7 @@ class WaterWaveRS/* extends RenderScriptScene */ {
 
     private Allocation loadRotatedTexture(int resId) {
         Bitmap bitmap = BitmapFactory.decodeResource(mResources, resId);
-        final Allocation allocation = Allocation.createFromBitmap(mRS, otherRotate(bitmap, 180));
+        final Allocation allocation = Allocation.createFromBitmap(mRS, otherRotate(bitmap, 0));
         return allocation;
     }
 
@@ -552,10 +554,12 @@ class WaterWaveRS/* extends RenderScriptScene */ {
                 "  gl_Position = vec4(pos.x, pos.y, 0.0, 1.0);\n" +
                 "  float dxMul = 1.0;\n" +
 
-                "  varTex0 = vec2((pos.x + 1.0), (pos.y + 1.6666));\n" +
+//              "  varTex0 = vec2((pos.x + 1.0), (pos.y + 1.6666));\n" +
+                "  varTex0 = vec2((pos.x +1.2), (-pos.y+1.15));\n" +
 
                 "  if (UNI_Rotate < 0.9) {\n" +
-                "    varTex0.xy *= vec2(0.25, 0.33);\n" +
+//                "    varTex0.xy *= vec2(0.25, 0.33);\n" +
+                "    varTex0.xy *= vec2(0.4, 0.45);\n" +
                 "    varTex0.x += UNI_Offset.x * 0.5;\n" +
                 "    pos.x += UNI_Offset.x * 2.0;\n" +
                 "  } else {\n" +
